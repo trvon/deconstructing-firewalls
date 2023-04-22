@@ -1,0 +1,11 @@
+version 3:
+  services:
+    snort-firewall:
+      build: 
+        context: snort
+        dockerfile: Dockerfile.dp
+      privileged: true
+    test:
+      build:
+        context: test
+        dockerfile: Dockerfile.test
